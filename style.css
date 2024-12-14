@@ -1,0 +1,185 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+    text-decoration: none;
+    height: 130vh;
+}
+a{
+    text-decoration:none;
+}
+header .contain-header {
+    display: flex;
+    justify-content:space-between;
+    margin-top: 2rem;
+    right:2rem;
+    left:2rem;
+    position:absolute
+  }
+  .contain-header .logo a span{
+       color:#D23904;
+  }
+  .contain-header .logo a {
+   text-transform: uppercase;
+   width: 208px;
+   font-size: 35px;
+   font-weight:500;
+   color: #fff;
+  }
+  .srch-box{
+      gap: 1px;
+  }
+  .srch-box i{
+      background: #D23904;
+      padding: 5px;
+      top: 3px;
+      margin-left:5rem;
+      color: black;
+      font-size:18px;
+      margin-top: 1rem;
+      border-radius: 6px;
+    
+  }
+  .srch-box input{
+      padding:2px 60px ;
+      height: 32px;
+      width: 330px;
+      border-radius: 15px;
+      background: rgba(135, 35, 0, 1);
+      border: solid .2px rgb(62, 62, 62);
+  }
+  .srch-box ::placeholder{
+      color: #fff;
+      letter-spacing: 0.7px;
+      font-size: 19px;
+  }
+  .icons i{
+      color: #fff;
+      font-size:29px;
+  }
+  .icons svg{
+      margin-top: -1px;
+      margin-left: 5.7rem;
+  }
+  .icons{
+      gap: 1.2px;
+  }
+  .icons .fa-brightness-low{
+      color: #fff;
+  }
+  .top-image {
+    position: absolute;
+    background-color: bisque;
+    width: 100vw;
+    height: 130vh;
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(./photo-top.avif);
+    clip-path: polygon(100% 0, 0 0, 0 100%);
+
+}
+.bottom-image {
+    position: absolute;
+    background-color: #D23904;
+
+
+    clip-path: polygon(100% 0, 0 100%, 100% 100%);
+    width: 100vw;
+    height: 130vh;
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+}
+
+.big-container{
+    position: relative;
+    top: 50%;
+    left: 51%;
+    transform:translate(-50%,-50%);
+    text-align: center;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 0px;
+}
+input {
+    padding: 5px;
+    background: rgb(107, 106, 106);
+
+}
+#crudForm button{
+    width: calc(20% - 5px);
+    text-align: center;
+    margin-left: 16rem;
+    height: 37px;
+    width: 200px;
+    margin-top: .4rem;
+    background: rgba(135, 35, 0, 1);
+    color: #ddd;
+    font-size: 19px;
+    border-radius:10px ;
+
+}
+#crudForm button p{
+     font-size: 19px;
+    
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    
+
+}
+th {
+    background-color: #f2f2f2;
+}
+th{
+    
+}
+#notification {
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    display: none;
+}
+label{
+    color: white;
+    display: flex;
+}
+.input-group {
+    display: flex;
+    flex-direction: column;
+    width: calc(46% - 10px);
+}
+#dataTable{
+    margin-top:3rem;
+}
+tbody{
+    color: white;
+    font-weight: 700;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+#three{
+    width: calc(30% - 5px);
+}
+#one{
+    width: calc(100% - 10px);
+}
+input{
+    border-radius: 18px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 17px;
+}

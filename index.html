@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Head content remains the same -->
+</head>
+ <!--All Meta-->
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="description" content="Free Web tutorials">
+ <meta name="keywords" content="HTML, CSS, JavaScript">
+ <meta name="author" content="John Doe">
+ <!-- link css file-->
+ <link rel="stylesheet" href="./style.css">
+ <!--link icons-->
+ <link rel="stylesheet" href="https://fonts.googleeapis.com/css2?family=Material+Symbol-Rounded:opsz,wght,FILL,GRAD@48,400,0,0">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+ <!-- Title -->
+    
+</head>
+<body>
+    <div class="top-image"></div>
+    <div class="bottom-image"></div>
+    <div class="overlay"></div>
+    <header>
+        <div class="contain-header">
+            <div class="logo">
+                <a href="#"><span>C</span>ruds</a>
+            </div>  
+
+            <div class="srch-box">
+            <i class="fa-solid fa-magnifying-glass"></i>                
+            <input type="text" placeholder="Search For A Products">
+            </div>
+
+            <div class="icons">
+                
+                <svg class="sun" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_2_23)">
+                    <path d="M24 2V6M24 42V46M8.44 8.44L11.28 11.28M36.72 36.72L39.56 39.56M2 24H6M42 24H46M8.44 39.56L11.28 36.72M36.72 11.28L39.56 8.44M34 24C34 29.5228 29.5228 34 24 34C18.4772 34 14 29.5228 14 24C14 18.4772 18.4772 14 24 14C29.5228 14 34 18.4772 34 24Z" stroke="#D03905" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_2_23">
+                    <rect width="48" height="48" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
+                    
+                <svg  width="44" height="44"   xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.7499 0.399994C1.00432 0.399994 0.399902 1.0268 0.399902 1.79999C0.399902 2.57319 1.00432 3.19999 1.7499 3.19999H42.2499C42.9954 3.19999 43.5999 2.57319 43.5999 1.79999C43.5999 1.0268 42.9954 0.399994 42.2499 0.399994H1.7499ZM1.7499 11.6H42.2499C42.9954 11.6 43.5999 12.2268 43.5999 13C43.5999 13.7732 42.9954 14.4 42.2499 14.4H1.7499C1.00432 14.4 0.399902 13.7732 0.399902 13C0.399902 12.2268 1.00432 11.6 1.7499 11.6ZM0.399902 24.2C0.399902 23.4269 1.00432 22.8 1.7499 22.8H42.2499C42.9954 22.8 43.5999 23.4269 43.5999 24.2C43.5999 24.9731 42.9954 25.6 42.2499 25.6H1.7499C1.00432 25.6 0.399902 24.9731 0.399902 24.2ZM1.7499 34C1.00432 34 0.399902 34.6269 0.399902 35.4C0.399902 36.1731 1.00432 36.8 1.7499 36.8H42.2499C42.9954 36.8 43.5999 36.1731 43.5999 35.4C43.5999 34.6269 42.9954 34 42.2499 34H1.7499Z" fill="white"/>
+                    </svg>
+           </div>
+        </div> 
+    </header>
+
+    <div class="big-container">
+    <form id="crudForm">
+        <div class="container">
+
+        <div class="input-group">
+            <label for="name">Product Name:</label>
+            <input type="text" id="name" required>
+        </div>
+        
+        <div class="input-group">
+            <label for="name">Product Category:</label>
+            <input type="text" id="categ" required>
+            
+        </div>
+        <div class="input-group" id="three">
+            <label for="price">Product Price:</label>
+            <input type="number" id="price" >
+        </div>
+        
+        <div class="input-group" id="three">
+            <label for="number">Product Discount:</label>
+            <input type="number" id="discount" >
+        </div>
+
+        <div class="input-group" id="three">
+            <label for="quantity">Product Quantity:</label>
+            <input type="number" id="quantity" >
+        </div>
+        <div class="input-group" id="one">
+            <label for="description">Product Descriotion:</label>
+            <input type="text" id="description" >
+        </div>
+    </div>
+        <button type="submit">ADD PRODUCE</button>
+    </form>
+    
+    <div id="notification"></div>
+    
+    <table id="dataTable">
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Product category</th>
+                <th>Product price</th>
+                <th>Product Discount</th>
+                <th>Product Discount</th>
+                <th>Product Description</th>
+                <th>Delete And Edit</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+   <script src>
+
+    let data = JSON.parse(localStorage.getItem('crudData')) || [];
+let editIndex = -1;
+const form = document.getElementById('crudForm');
+const table = document.getElementById('dataTable').getElementsByTagName('tbody')[0];
+const notification = document.getElementById('notification');
+
+function showNotification(message) {
+    notification.textContent = message;
+    notification.style.display = 'block';
+    setTimeout(() => {
+        notification.style.display = 'none';
+    }, 3000);
+}
+
+function renderTable() {
+    table.innerHTML = '';
+    data.forEach((item, index) => {
+        const row = table.insertRow();
+        Object.values(item).forEach(text => {
+            const cell = row.insertCell();
+            cell.textContent = text;
+        });
+        const actionsCell = row.insertCell();
+        actionsCell.innerHTML = `
+            <button onclick="editItem(${index})">Edit</button>
+            <button onclick="deleteItem(${index})">Delete</button>
+        `;
+    });
+}
+
+function saveData() {
+    localStorage.setItem('crudData', JSON.stringify(data));
+}
+
+function addItem(item) {
+    data.push(item);
+    saveData();
+    renderTable();
+    showNotification('Item added successfully');
+}
+
+function updateItem(index, item) {
+    data[index] = item;
+    saveData();
+    renderTable();
+    showNotification('Item updated successfully');
+}
+
+function editItem(index) {
+    const item = data[index];
+    document.getElementById('name').value = item.name;
+    document.getElementById('categ').value = item.categ;
+    document.getElementById('price').value = item.price;
+    document.getElementById('discount').value = item.discount;
+    document.getElementById('quantity').value = item.quantity;
+    document.getElementById('description').value = item.description;
+        
+    
+    ;
+    editIndex = index;
+}
+
+function deleteItem(index) {
+    data.splice(index, 1);
+    saveData();
+    renderTable();
+    showNotification('Item deleted successfully');
+}
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const item = {
+        name: document.getElementById('name').value,
+        categ: document.getElementById('categ').value,
+        age: document.getElementById('price').value,
+        city: document.getElementById('discount').value,
+        occupation: document.getElementById('quantity').value,
+        Description: document.getElementById('description').value,
+    };
+    if (editIndex === -1) {
+        addItem(item);
+    } else {
+        updateItem(editIndex, item);
+        editIndex = -1;
+    }
+    form.reset();
+});
+
+// Load data when the page loads
+renderTable();
+
+
+   </script>
+</body>
+</html>
